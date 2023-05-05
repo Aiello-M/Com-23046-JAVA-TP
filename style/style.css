@@ -1,0 +1,472 @@
+
+
+/* (1) BARRA NAVEGACION  */
+
+.navbar{
+    background-color:rgb(53, 58, 64);
+}
+
+.navbar .container-fluid{ 
+    margin: 0 auto;
+    padding: 0% 7%; 
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus{
+    color: white;
+}
+
+#comprar,
+.navbar .navbar-nav .nav-item .nav-link:active{
+    color: rgb(41, 167, 68);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* (2) HEADER */
+
+
+/* Contenedor: de la img y texto*/
+#header {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* texto */
+#header .text-block {
+    position: absolute;
+    background-color: none;
+    color: white;
+    font-size: 1em; 
+    font-weight: 500;
+   
+    /* posición del bloque txt respecto contenedor total*/
+    bottom: 20%;
+    right: 7%;
+
+    /* posición del texto dentro del bloque txt */
+    padding-left: 20%;
+    padding-right: 0px;
+    text-align: right;
+}
+
+#header .text-block h1{
+    font-weight: 600;
+}
+
+#header img{
+    filter: brightness(0.45);
+    background-size: cover;
+    text-align: center;
+	background-position: center right;
+	background-repeat: no-repeat;
+
+    height:85vh;
+    width: calc(vw + 50%);
+}
+
+#header .carousel-control-next,
+#header .carousel-control-prev{
+    position: absolute;
+    width: 5%;
+}
+
+/* Boton comprar */
+#header .btn-comprar,
+#header .btn-comprar:focus{
+    color: white;
+    font-weight: 500;
+    background-color: rgb(41, 167, 68);
+    transition: .2s ease-in-out all;       
+}
+
+#header .btn-comprar:hover{
+    background-color: rgb(47, 122, 67);
+    border: 1px solid  rgb(47, 122, 67); 
+}
+
+#header .btn-comprar:active{
+    background-color: rgb(47, 122, 67);
+    box-shadow: 0 0 0 3px rgb(47, 122, 67,0.5);
+    text-shadow: 0 0 1px white;
+}
+
+
+/* Boton ser orador*/
+#header .btn-outline-light,
+#header .btn-outline-light:focus{
+    font-weight: 500;
+    margin-right: 10px;
+    transition: .2s ease-in-out all;
+}
+
+#header .btn-outline-light:hover{
+    color: white;
+    background-color: rgb(53,58,64, 0.8);
+    border:1px solid rgb(53,58,64, 0.8);
+    
+}
+
+#header .btn-outline-light:active{
+    background-color: rgb(53,58,64, 0.8);
+    box-shadow: 0 0 0 3px rgb(86, 96, 89, 0.5);
+    text-shadow: 0 0 1px white;
+}
+
+
+
+/* Responsive */
+@media (min-width: 960px) and (min-height: 472px){
+    #header img{
+        width: 100%;
+        height: auto;
+    }   
+    #header .text-block {
+        font-size: 1.1em; 
+        bottom: 24%;
+        padding-left: 49%;
+    }
+}
+
+@media (min-width: 768px)and (max-width: 992px) and (min-height: 472px){
+    #header .text-block {
+        font-size: 1.1em; 
+        bottom: 11%;
+        padding-left: 40%;
+    } 
+}
+
+@media (min-width: 576px) and (max-width: 768px) and (min-height: 472px) {  
+    #header .text-block {
+        font-size: 1.1em; 
+        bottom: 20%;
+        padding-left: 30%;  
+    }
+}
+
+@media (max-width: 421px) and (min-height: 472px) {  
+    #header .text-block {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        left: 7%;
+        right: 7%;
+        font-size: 0.9em; 
+        bottom: 7%;     
+    }
+    #header .btn-outline-light{
+        margin-bottom: 0.9rem;
+    }
+}
+
+@media (max-height: 472px){  
+    #header img{
+        width: 100%;
+        height: auto;
+    } 
+
+    #header .text-block {
+        position: relative;
+        text-align: center;
+        font-size: 1.1em; 
+        
+        padding-top: 1rem; 
+        padding-bottom: 1rem;
+    }
+}
+
+
+
+
+
+
+
+/* (3) CONOCE ORADORES*/
+
+
+/* Título y subtítulo sección */
+#conoce-oradores .container{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page-section h6{
+    font-size: smaller;
+}
+
+
+/* Columnas*/
+#conoce-oradores .card-group{
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    width: 73%;
+    max-width:300px;
+}
+
+#conoce-oradores .col{
+    padding-bottom: 2rem;
+}
+
+
+/* Columnas: pantalla mediana o grande*/
+@media (min-width: 768px){
+    #conoce-oradores .col{
+        padding-bottom: 2rem;
+    }
+
+    #conoce-oradores .card-group{
+        width: 100%;
+        width: 75%;
+        max-width:75%;
+    }   
+}
+
+
+/* Efecto hover en cards */
+#conoce-oradores .card{
+    box-shadow: 0 1px 1px rgb(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#conoce-oradores .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgb(0,0,0,0.2);
+}
+
+
+/* Texto*/
+#conoce-oradores .card-body{
+    padding-top: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+
+#conoce-oradores .card-body h5{
+    padding-top: 0.4rem;
+    padding-bottom: 0.5rem;
+}
+
+#conoce-oradores .card-body p{
+    font-size:12.5px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+
+/* Btonones */
+#conoce-oradores .btn-warning{
+    font-weight:bold;
+    padding: 0px 5px 0px 4px;
+}
+
+#conoce-oradores .btn-info,
+#conoce-oradores .btn-secondary,
+#conoce-oradores .btn-danger{
+    color: white;
+    font-weight:bold;
+    padding: 0px 5px 0px 4px;
+}
+
+
+
+
+
+
+
+
+
+/* (4) BS AS OCTUBRE*/
+
+#lugar-fecha {
+    margin-top: 1rem;
+}
+
+#lugar-fecha .container-img{
+    padding: 0;
+}
+
+#lugar-fecha .container-text{
+    background-color: rgb(53, 58, 64);
+    color: white;
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#lugar-fecha .container-text p{
+    color: white;
+    font-size: 0.79em;
+    line-height: 22px;
+}
+
+#lugar-fecha .container-text .btn:active{
+    box-shadow: 0 0 0 3px rgb(178, 178, 178, 0.5);
+    text-shadow: 0 0 2px rgb(0,0,0,0.5);
+    transition: .2s ease-in-out all;
+}
+
+@media (min-width: 768px) and (max-width: 897px){
+    #lugar-fecha .container-img{
+    background-image: url("../img/honolulu.jpg");
+    background-size: 300%;
+	background-position: center right;
+	background-repeat: no-repeat;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* (5) CONVIERTETE EN ORADOR */
+
+/* Titulos */
+#conviertete-orador .container{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 80%; 
+}
+
+#conviertete-orador h2{
+    letter-spacing: 1px;
+}
+
+#conviertete-orador .subtitulo{
+    font-size:0.95em ;
+    color: rgb(53, 58, 64); 
+    padding-bottom: 0rem;  
+}
+
+#conviertete-orador u{
+    text-decoration-style: dotted;   
+}
+
+
+
+
+/* Formulario */
+
+#conviertete-orador .container-fluid{
+    width: 75%;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    #conviertete-orador .container-fluid{
+        width:68%;
+}}
+
+@media (min-width: 992px){
+    #conviertete-orador .container-fluid{
+        width:50%;
+}}
+
+
+#conviertete-orador p{
+    font-size:0.8em;
+    color: #6e757b;
+    padding-left: 1rem;
+}
+
+/* Boton del formulario*/
+#conviertete-orador .btn-enviar{
+    background: rgb(150, 201, 62);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    width: 100%;
+    transition: .2s ease-in-out all;
+}
+
+#conviertete-orador .btn-enviar:hover{
+    background-color: rgb(111, 149, 46);
+}
+
+#conviertete-orador .btn-enviar:active{
+    background-color: rgb(111, 149, 46);
+    box-shadow: 0 0 0 3px rgb(150, 201, 62, 0.5);
+    text-shadow: 0 0 1px white;
+}
+
+
+
+
+
+/* (6) FOOTER */
+
+.footer{
+    background-color:rgb(29, 67, 88);
+}
+
+.footer .container{
+    width: 100%;
+    max-width: 75%;
+}
+
+.footer .col{
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.91rem;
+}
+
+.footer a:hover{
+    color: #4fb7f0;
+}
+
+
+@media (min-width: 721px) and (max-width: 992px){
+    .footer a{
+        font-size: 0.8rem;
+    }
+
+    .footer .container{
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 722px) {
+    .footer a{
+        font-size: 0.8rem;
+    }
+
+    .footer .container{
+        max-width: 95%;
+        padding-top: 0.3rem;
+    }  
+}
+
+@media (max-width: 576px) {
+    .footer a{
+        font-size: 0.8rem;
+    }
+
+    .footer .container{
+        max-width: 75%;
+        padding-top: 0.3rem;
+    }  
+
+    .footer .col{
+        text-align: start;
+    }
+}
