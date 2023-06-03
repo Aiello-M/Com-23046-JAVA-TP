@@ -385,14 +385,16 @@
 /* (5) CONVIERTETE EN ORADOR */
 
 /* Titulos */
-#conviertete-orador .container{
+#conviertete-orador .container,
+#comprar-tickets .container{
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: 80%; 
 }
 
-#conviertete-orador h2{
+#conviertete-orador h2,
+#comprar-tickets h2{
     letter-spacing: 1px;
 }
 
@@ -411,18 +413,21 @@
 
 /* Formulario */
 
-#conviertete-orador .container-fluid{
+#conviertete-orador .container-fluid,
+#comprar-tickets .container-fluid{
     width: 75%;
     padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) and (max-width: 992px){
-    #conviertete-orador .container-fluid{
+    #conviertete-orador .container-fluid,
+    #comprar-tickets .container-fluid{
         width:68%;
 }}
 
 @media (min-width: 992px){
-    #conviertete-orador .container-fluid{
+    #conviertete-orador .container-fluid,
+    #comprar-tickets .container-fluid{
         width:50%;
 }}
 
@@ -433,8 +438,24 @@
     padding-left: 1rem;
 }
 
+#comprar-tickets .form-label{
+    padding-left: 0.7rem;
+}
+
+#comprar-tickets .alert{
+    color: #0043a3;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    
+}
+
+
 /* Boton del formulario*/
-#conviertete-orador .btn-enviar{
+#conviertete-orador .btn-enviar,
+#comprar-tickets .btn-borrar,
+#comprar-tickets .btn-resumen{
     background: rgb(150, 201, 62);
     color: white;
     font-size: 1.1em;
@@ -443,17 +464,118 @@
     transition: .2s ease-in-out all;
 }
 
-#conviertete-orador .btn-enviar:hover{
+#conviertete-orador .btn-enviar:hover,
+#comprar-tickets .btn-borrar:hover,
+#comprar-tickets .btn-resumen:hover{
     background-color: rgb(111, 149, 46);
 }
 
-#conviertete-orador .btn-enviar:active{
+#conviertete-orador .btn-enviar:active,
+#comprar-tickets .btn-borrar:active,
+#comprar-tickets .btn-resumen:active{
     background-color: rgb(111, 149, 46);
     box-shadow: 0 0 0 3px rgb(150, 201, 62, 0.5);
     text-shadow: 0 0 1px white;
 }
 
 
+
+/* MENSAJES error y alerta del formulario */
+#conviertete-orador .error-message,
+#comprar-tickets .error-message{
+    color: red;
+} 
+   
+#conviertete-orador  #alert-container,
+#comprar-tickets #alert-container{
+    margin-top: 10px;
+}
+
+#conviertete-orador  .alert,
+#comprar-tickets .alert {
+    margin-bottom: 10px;
+    text-align: center;  
+}
+
+#formulario .error-message-left,
+#comprar-tickets .error-message-left{
+    text-align: left !important;
+}
+  
+#conviertete-orador  .alert-success,
+#comprar-tickets .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+  
+#conviertete-orador .alert-danger,
+#comprar-tickets .alert-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+  
+  
+
+
+
+
+/* DESCUENTOS */
+
+/* Columnas*/
+#descuentos .card-group{
+    justify-content: center;
+    text-align: center;
+    margin: -2rem auto;
+    margin-bottom: 0;
+    padding:0;
+    width: 73%;
+    max-width:300px;
+}
+
+#descuentos .card-group .card{
+    width: 109%;
+    border-radius: 0;
+}
+
+@media (min-width: 768px){
+    #descuentos .card-group{
+        width: 100%;
+        width: 75%;
+        max-width:75%;
+    }   
+}
+
+
+/* Efecto hover en cards */
+#descuentos .card{
+    box-shadow: 0 0px 0px rgb(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#descuentos .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 5px rgb(0,0,0,0.2);
+}
+
+
+/* Texto*/
+#descuentos .card h4{ 
+    padding-bottom: 0.5rem;
+}
+
+#descuentos .card .text-muted {
+    margin-bottom: 0.3rem; 
+}
+
+#errorCant {
+    margin-bottom: -1rem;
+    margin-left: 0.7rem;
+    margin-right: 0.1rem;
+    font-size: 0.8em;
+}
+/*line-height: 0.8;*/
+  
 
 
 

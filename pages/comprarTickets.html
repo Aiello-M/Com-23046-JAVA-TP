@@ -11,6 +11,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"
         >
+        <!-- JS-->
+        <script type="text/javascript" src="../script/script_tickets.js"></script>
 
         <!-- TITULO-->
         <link rel="icon" type="image/x-icon" href="../img/codoacodo.png">
@@ -61,42 +63,103 @@
         </nav>
 
 
-    
+        <!-- DESCUENTOS-->
+        <section class="page-section" id="descuentos" style="margin-top:2rem;">
+    "
+            <div class="card-group">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col "> 
+                <div class="card border-primary h-100">
+                    <div class="card-body">
+                        <h4>Estudiante</h4>
+                        <p>Tiene un descuento</p>
+                        <p><strong>80%</strong></p>
+                        <p class="text-muted"><small>*presentar documentación</small></p> 
+                    </div>  
+                </div>
+                </div>
+
+                <div class="col "> 
+                <div class="card border-info h-100">
+                    <div class="card-body">
+                        <h4>Trainee</h4>
+                        <p>Tiene un descuento</p>
+                        <p><strong>50%</strong></p>
+                        <p class="text-muted"><small>*presentar documentación</small></p>
+                    </div>   
+                </div>
+                </div>
+
+                <div class="col"> 
+                <div class="card border-warning h-100">
+                    <div class="card-body">
+                        <h4>Junior</h4>
+                        <p>Tiene un descuento</p>
+                        <p><strong>15%</strong></p>
+                        <p class="text-muted"><small>*presentar documentación</small></p>
+                    </div>   
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
 
         <!-- COMPRAR TICKETS-->
-        <section class="page-section" id="conviertete-orador" style="margin-bottom: 3rem; margin-top: 4rem;">
+        <section class="page-section" id="comprar-tickets">
             <div class="container">
-                <h6 class="text-muted">COMPRAR</h6>
-                <h2>TICKETS</h2>
-                <h6 class="subtitulo"> ¡Aproveche a comprar su <u>ticket</u> ahora! </h6>
+                <h6 class="text-muted">VENTA</h6>
+                <h2>VALOR DEL TICKET $200</h2>
             </div>
 
             <div class="container-fluid" >
-                <form action="" method="POST" id="form" class="row g-2">
+                <form  id="form" class="row g-2">
         
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre2">
+                        <p class="error-message error-message-left" id="nombre-error"></p>
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellido2">
+                        <p class="error-message error-message-left" id="apellido-error"></p>
+                    </div>
+                    
+                    <div class="col-mb-12 mb-3">
+                        <input type="email" class="form-control" placeholder="Correo" aria-label="correo" id="email">
+                        <p class="error-message error-message-left" id="email-error"></p>
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="N° tarjeta" aria-label="Tarjeta">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" placeholder="cantidad" aria-label="cantidad" id="cantidad" min="1" step="1" required>
+                        <p id="errorCant" class="text-danger"></p>
                     </div>
+
 
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Código seguridad" aria-label="Codigo seguridad">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <select class="form-select" id="categoria">
+                            <option value="general" selected>General</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="junior">Junior</option>
+                        </select>
                     </div>
 
-                    <p> Verifique que los datos ingresados sean correctos </p>
+                    <!--mensaje de respuesta a la acción del usuario-->
+                    <div class="alert alert-primary" role="alert" >
+                        <p class="mb-0 error-message-left" id="montoTotal">Total a Pagar: $</p>
+                    </div>
 
                     <div class="col mb-3">
-                        <button class="btn btn-enviar" type="button">
-                          Comprar
-                        </button>
+                        <input type="submit" value="Borrar" class="btn btn-borrar">
+                    </div>
+                    <div class="col mb-3">
+                        <input type="submit" value="Resumen" class="btn btn-resumen">
+                    </div>
+                    <div class="col-12">
+                        <div id="alert-container"></div>
                     </div>
                 </form>
             </div>
@@ -130,6 +193,8 @@
             integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
             crossorigin="anonymous">
         </script>
+
+        
 
 
     </body>
